@@ -3,20 +3,11 @@ import { useState, useEffect, useRef } from "react"
 import Image from "next/image";
 import Link from 'next/link';
 import { FaBars } from "react-icons/fa";
-import Sidebar from "@/components/Sidebar";
 
 function Navbar(){
 
-  const [isSidebarVisible, setSidebarVisible] = useState(false);
-
-  const toggleSidebar = () => {
-    setSidebarVisible(!isSidebarVisible);
-  };
-
-
   return (
     <div className="z-[9999] w-full h-30 flex flex-col justify-center fixed top-0 left-0 border-b-2 border-neutral-800">
-      <Sidebar isVisible={isSidebarVisible} toggleSidebar={toggleSidebar} />
 
         {/* GREEN TOP BAR */}
         <div className="flex flex-row w-full h-10 bg-green-900 justify-center items-center sm:px-10 px-2 text-xs">
